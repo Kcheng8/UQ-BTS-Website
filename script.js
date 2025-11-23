@@ -15,6 +15,24 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.classList.add("visible");
     }
 
+    // ------- Hamburger menu dropdown -------
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    if (menuToggle && navLinks) {
+        // Open/close menu when hamburger clicked
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+        });
+
+        // Optional: close menu when a link is clicked
+        navLinks.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navLinks.classList.remove("show");
+            });
+        });
+    }
+
     // -------- Gallery slider --------
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");

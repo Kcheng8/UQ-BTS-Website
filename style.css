@@ -249,28 +249,53 @@ body {
 /* Team Section */
 .team_section {
     padding: 60px 20px;
-    color: white;
+    color: #ffffff;
 }
 
 .team_section .section_title {
     text-align: center;
     font-size: 2.2rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+/* Sub-headings: T3, Officers, General Executives */
+.team_group_title {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
 /* Grid layout for team cards */
 .team_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 24px;
+    justify-items: center;   /* centers cards in each column */
+    align-items: stretch;
+    margin-bottom: 10px;
 }
 
 /* Individual team card */
 .team_card {
+    width: 100%;
+    max-width: 280px;
     background-color: rgba(0, 0, 0, 0.25);
-    border-radius: 12px;
+    border-radius: 16px;
     padding: 20px 18px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(4px);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.team_card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
 }
 
 /* Team photo */
@@ -280,6 +305,7 @@ body {
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 12px;
+    border: 3px solid rgba(255, 255, 255, 0.7);
 }
 
 /* Name + role */
@@ -296,11 +322,29 @@ body {
     margin-bottom: 8px;
 }
 
-/* Short bio */
+/* Bio text */
 .team_bio {
     font-size: 0.9rem;
     line-height: 1.5;
+    opacity: 0.9;
 }
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .team_section {
+        padding: 50px 16px;
+    }
+
+    .team_group_title {
+        margin-top: 28px;
+        margin-bottom: 12px;
+    }
+
+    .team_card {
+        max-width: 320px;
+    }
+}
+
 
 /* Sponsor Section */
 .sponsor_section {
@@ -529,5 +573,118 @@ body {
     height: 100%;
     object-fit: cover;   /* fill the box neatly */
     border-radius: 12px;
+}
+
+/* Footer */
+.footer {
+    background-color: #4a004f; /* darker purple for contrast */
+    color: #ffffff;
+    padding: 40px 20px 20px;
+    margin-top: 60px;
+}
+
+.footer_container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+/* Footer Sections */
+.footer_section h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer_links {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_links li {
+    margin-bottom: 8px;
+}
+
+.footer_links a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer_links a:hover {
+    color: #e0b3ff;
+}
+
+/* Brand Area */
+.footer_brand {
+    max-width: 270px;
+}
+
+.footer_logo {
+    width: 60px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.footer_title {
+    margin: 5px 0;
+    font-size: 1.4rem;
+}
+
+.footer_subtext {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Social Icons */
+.footer_socials {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.social_icon {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #ffffff;
+    transition: 0.3s;
+}
+
+.social_icon:hover {
+    color: #e0b3ff;
+}
+
+/* Footer Bottom Bar */
+.footer_bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    border-top: 1px solid #ffffff33;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .footer_container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+}
+
+.social_img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    margin: 0 4px;   /* reduced from 8px → closer icons */
+    transition: 0.3s;
+}
+
+.social_img:hover {
+    transform: scale(1.15);
+    opacity: 0.8;
 }
 
