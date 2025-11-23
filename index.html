@@ -4,33 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
     <title>UQ Biotech Society</title> 
 </head>
 
 <body>
     <!-- Navigation Bar --> 
     <nav class="navbar">
-
-        <!-- Logo Section -->
         <div class="nav-left">
             <img src="Images/uq_biotechnology_society_logo.jpeg" 
-                 alt="UQ Biotech Society Logo" 
-                 class="logo-img">
-        <div class="logo">UQ Biotechnology Society</div>
+                alt="UQ Biotech Society Logo" 
+                class="logo-img">
+            <div class="logo">UQ Biotechnology Society</div>
         </div>
 
-        <!-- Links to Pages in the Navigation Bar --> 
-        <ul class="nav-links">
-            <li><a href="#home" class="nav-item">Home</a></li>
-            <li><a href="#about" class="nav-item">About</a></li>
-            <li><a href="#team_section" class="nav-item">Meet the team</a></li>
-            <li><a href="#events" class="nav-item">Events</a></li>
-            <li><a href="#sponsors" class="nav-item">Sponsors</a></li>
-            <li><a href="#newsletter" class="nav-item">News Letter</a></li>
-        </ul>
+        <!-- Hamburger button for mobile -->
+        <button class="menu-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+
+    <ul class="nav-links">
+        <li><a href="#hero" class="nav-item">Home</a></li>
+        <li><a href="#about" class="nav-item">About</a></li>
+        <li><a href="#team_section" class="nav-item">Meet the team</a></li>
+        <li><a href="#events" class="nav-item">Events</a></li>
+        <li><a href="#gallery" class="nav-item">Gallery</a></li>
+        <li><a href="#sponsors" class="nav-item">Sponsors</a></li>
+    </ul>
     </nav>
 
-<section class="hero_section">
+
+<section class="hero_section" id="hero">
     <div class="section_container">
         <div class="hero_container">
             
@@ -41,7 +45,7 @@
             </div>
 
             <div class="hero_section_button">
-                <button class="button">Become a Member</button>
+                <button class="button">Latest News</button>
                 <button class="button">Upcoming Events</button>
             </div>
 
@@ -50,75 +54,152 @@
 </section>
 
     <!-- About Section -->
-    <section class="about_us" id="about">
-        <div class="section_container">
-            <div class="about_container">
+<section class="about_us reveal" id="about">
+    <div class="section_container">
+        <div class="about_container">
 
-                <div class="text_section">
-                    <h2 class="section_title">About Us</h2>
-                    <p>
-                        <b>We are the University of Queensland’s founding Biotechnology Student Society.</b>
-                        We aim to provide professional networking, employability opportunities, research information,
-                        social events for science students, and mentoring – all to enhance the student experience.
-                        We are a collective of ambitious students from across biotechnology and STEM who want to connect
-                        with like-minded people, build relationships, discover the world of biotech, and engage with
-                        industry leaders.
-                    </p>
-                </div>
-
-                <div class="image_section">
-                    <img src="Images/Career night.jpeg"
-                        alt="UQ Biotech Society"
-                        class="about_img">
-                </div>
-
+            <div class="text_section">
+                <h2 class="section_title">About Us</h2>
+                <p>
+                    <b>We are the University of Queensland’s founding Biotechnology Student Society.</b>
+                    We aim to provide professional networking, employability opportunities,
+                    research information, social events for science students, and mentoring –
+                    all to enhance the student experience.
+                    We are a collective of ambitious students from across biotechnology and STEM
+                    who want to connect with like-minded people, build relationships, discover
+                    the world of biotech, and engage with industry leaders.
+                </p>
             </div>
+
+            <div class="image_section">
+                <img src="Images/Career night.jpeg"
+                    alt="UQ Biotech Society"
+                    class="about_img">
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
+
 
     <section class="team_section" id="team_section">
         <div class="section_container">
             <h2 class="section_title">Meet the Team</h2>
 
             <div class="team_grid">
-                <!-- Team member 1 -->
+                <!-- T3 -->
+                 <!-- President -->
                 <div class="team_card">
                     <img src="Images/president.jpg" alt="President" class="team_photo">
                     <h3 class="team_name">Name Surname</h3>
                     <p class="team_role">President</p>
                     <p class="team_bio">
-                        Leads the society, oversees events and industry partnerships,
-                        and represents UQ Biotech students across campus.
+                        Oversees all society operations and sets the direction 
+                        upon which the decisions of the rest of the executive are based. 
                     </p>
                 </div>
 
-                <!-- Team member 2 -->
+                <!-- Treasurer -->
                 <div class="team_card">
                     <img src="Images/vice_president.jpg" alt="Treasurer" class="team_photo">
                     <h3 class="team_name">Name Surname</h3>
                     <p class="team_role">Treasurer</p>
                     <p class="team_bio">
-                        Supports the executive team, helps coordinate major initiatives,
-                        and drives new projects for members.
+                        responsible for monitoring the society’s finances, recording and reporting all transactions
+                         - ensuring the aims and objectives of the society are achievable within budget. 
                     </p>
                 </div>
 
-                <!-- Team member 2 -->
+                <!-- Secretary -->
                 <div class="team_card">
                     <img src="Images/vice_president.jpg" alt="Secretary" class="team_photo">
                     <h3 class="team_name">Name Surname</h3>
                     <p class="team_role">Secretary</p>
                     <p class="team_bio">
-                        Supports the executive team, helps coordinate major initiatives,
-                        and drives new projects for members.
+                        responsible for meetings, record keeping and newsletter. The central coordinator of the society’s 
+                        operations, ensuring that communication, governance, and administration run seamlessly.
                     </p>
                 </div>
-
-                <!-- Team member 3 -->
+                <!-- Officers -->
+                <!-- Professional Events Officer -->
                 <div class="team_card">
                     <img src="Images/Headshot.jpeg" alt="Professional Events Officer" class="team_photo">
                     <h3 class="team_name">Kierren Cheng</h3>
                     <p class="team_role">Professional Events Officer</p>
+                    <p class="team_bio">
+                        Kierren is a 5th year Engineering and Science student majoring in chemical/ bioprocess engineering and microbiology.
+                         <!-- He is responsible for coordinating all professional development and industry-related
+                        events for the society.-->
+                        
+
+                    </p>
+                </div>
+
+                <!-- Undergraduate Officer -->
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">Undergraduate Officer</p>
+                    <p class="team_bio">
+                        Responsible for coordinating all undergraduate events for the
+                        undergraduate population and ensuring the interests of an undergraduate student
+                        is at the forefront of all events. 
+
+                    </p>
+                </div>
+
+                 <!-- Postgraduate Officer -->
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">Postgraduate Officer</p>
+                    <p class="team_bio">
+                        Responsible for coordinating all postgrad events for the postgraduate population and ensuring
+                         the interests of an undergraduate student is at the forefront of all events. 
+
+                    </p>
+                </div>
+
+                <!-- Media Officer -->
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">Media Officer</p>
+                    <p class="team_bio">
+                        Responsible for managing social media platforms 
+                        and communicating the society's activities and events to members. 
+
+                    </p>
+                </div>
+
+                <!-- Graphic Design Officer -->
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">Graphic Design Officer</p>
+                    <p class="team_bio">
+                        Responsible for visually communicating the Society’s activities
+                         and events through creative and engaging design content. 
+
+
+                    </p>
+                </div>
+
+                <!-- General Executives -->
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">General Executive</p>
+                    <p class="team_bio">
+                        Coordinates networking nights, panels, and social events connecting
+                        students with researchers and industry.
+                    </p>
+                </div>
+
+                <div class="team_card">
+                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate officer" class="team_photo">
+                    <h3 class="team_name">First Last</h3>
+                    <p class="team_role">General Executive</p>
                     <p class="team_bio">
                         Coordinates networking nights, panels, and social events connecting
                         students with researchers and industry.
@@ -130,15 +211,34 @@
         </div>
     </section>
 
-    <!-- Events Section -->
+    <!-- Upcoming Events Section -->
     <section id="events" class="section_container">
         <div class="about_container">
-            <h2 class="text_section">Events</h2>
+            <h2 class="text_section">Upconing Events</h2>
             <p>
                 The UQ Biotechnology Society runs a range of professional and social events including lab tours, research and industry nigths and career panels.
             </p>
         </div>
     </section>
+
+    <!-- Gallery -->
+     
+    <div class="gallery_slider" id="gallery">
+
+        <button class="gallery_btn prev">&#10094;</button>
+
+        <div class="slide">
+            <div class="item"><img src="Images/Bioinformatics panel.jpeg"></div>
+            <div class="item"><img src="Images/commercialisation panel.jpeg"></div>
+            <div class="item"><img src="Images/Career night.jpeg"></div>
+            <div class="item"><img src="Images/Research night.jpeg"></div>
+            <div class="item"><img src="Images/Industry Night.jpeg"></div>
+        </div>
+
+        <button class="gallery_btn next">&#10095;</button>
+
+    </div>
+
 
     <section class="sponsor_section" id="sponsors">
         <div class="section_container">
@@ -173,12 +273,5 @@
 
         </div>
     </section>
-
-
-</body>
-</html>
-
-
-    </nav>
 </body>
 </html>
