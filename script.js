@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "section, .team_card, .sponsor_card, .about_container, .hero_container, .text_section, img, h2, h3, p"
     );
 
-    // Use a simple loop instead of NodeList.forEach (works on older mobile browsers)
+    // Add .reveal to targets
     for (let i = 0; i < revealEls.length; i++) {
         revealEls[i].classList.add("reveal");
     }
@@ -18,26 +18,25 @@ document.addEventListener("DOMContentLoaded", () => {
         navbar.classList.add("visible");
     }
 
-    // ------- Hamburger menu dropdown -------
-    document.addEventListener("DOMContentLoaded", () => {
-        const menuToggle = document.querySelector(".menu-toggle");
-        const navLinks = document.querySelector(".nav-links");
+    // ------- Hamburger menu dropdown (NO nested DOMContentLoaded) -------
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
 
-        if (menuToggle && navLinks) {
-            menuToggle.addEventListener("click", () => {
-                navLinks.classList.toggle("show");
-                menuToggle.classList.toggle("active"); // animates bars into X
-            });
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("show");
+            menuToggle.classList.toggle("active"); // animates bars into X
+        });
 
-            // Close menu when a link is clicked (optional)
-            navLinks.querySelectorAll("a").forEach((link) => {
-                link.addEventListener("click", () => {
-                    navLinks.classList.remove("show");
-                    menuToggle.classList.remove("active");
-                });
+        // Optional: close menu when a link is clicked
+        const links = navLinks.querySelectorAll("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", () => {
+                navLinks.classList.remove("show");
+                menuToggle.classList.remove("active");
             });
         }
-    });
+    }
 
     // -------- Gallery slider --------
     const prev = document.querySelector(".prev");
