@@ -1,10 +1,13 @@
 // Add .reveal to everything we want animated
 document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(
+    const revealEls = document.querySelectorAll(
         "section, .team_card, .sponsor_card, .about_container, .hero_container, .text_section, img, h2, h3, p"
-    ).forEach((el) => {
-        el.classList.add("reveal");
-    });
+    );
+
+    // Use a simple loop instead of NodeList.forEach (works on older mobile browsers)
+    for (let i = 0; i < revealEls.length; i++) {
+        revealEls[i].classList.add("reveal");
+    }
 
     // Run once on load so things already in view (like the hero) fade in
     handleScrollReveal();
@@ -26,11 +29,12 @@ document.addEventListener("DOMContentLoaded", () => {
         });
 
         // Optional: close menu when a link is clicked
-        navLinks.querySelectorAll("a").forEach((link) => {
-            link.addEventListener("click", () => {
+        const links = navLinks.querySelectorAll("a");
+        for (let i = 0; i < links.length; i++) {
+            links[i].addEventListener("click", () => {
                 navLinks.classList.remove("show");
             });
-        });
+        }
     }
 
     // -------- Gallery slider --------
@@ -60,10 +64,12 @@ document.addEventListener("DOMContentLoaded", () => {
 window.addEventListener("scroll", handleScrollReveal);
 
 function handleScrollReveal() {
-    document.querySelectorAll(".reveal").forEach((el) => {
+    const revealEls = document.querySelectorAll(".reveal");
+    for (let i = 0; i < revealEls.length; i++) {
+        const el = revealEls[i];
         const rect = el.getBoundingClientRect();
         if (rect.top < window.innerHeight - 50) {
             el.classList.add("visible");
         }
-    });
+    }
 }
