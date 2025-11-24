@@ -68,13 +68,37 @@ body {
 
 /* Hamburger button – hidden on desktop */
 .menu-toggle {
-    display: none;
+    display: none;           /* shown only on mobile via media query */
     background: none;
     border: none;
-    font-size: 1.8rem;
     cursor: pointer;
-    color: #333;
+    padding: 8px;
+    flex-direction: column;
+    gap: 4px;
 }
+
+/* Hamburger bars */
+.menu-toggle span {
+    width: 24px;
+    height: 2px;
+    background-color: #333;
+    border-radius: 999px;
+    transition: transform 0.3s ease, opacity 0.3s ease, background-color 0.3s ease;
+}
+
+/* Turn hamburger into an X when active */
+.menu-toggle.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 
 /* Mobile styles */
 @media (max-width: 768px) {
@@ -89,7 +113,13 @@ body {
         background-color: #b9b5b8;
         flex-direction: column;
         width: 100%;
-        display: none;          /* hidden by default */
+
+        max-height: 0;
+        overflow: hidden;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-10px);
+        transition: max-height 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
     }
 
     .nav-links li {
@@ -97,14 +127,19 @@ body {
         text-align: center;
     }
 
+    /* Animated dropdown when .show is added */
     .nav-links.show {
-        display: flex;          /* show when toggled */
+        max-height: 500px;      /* enough space for all links */
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
     }
 
     .menu-toggle {
-        display: block;         /* show hamburger on mobile */
+        display: flex;          /* show hamburger on mobile */
     }
 }
+
 
 .logo {
     font-size: 1.2rem;

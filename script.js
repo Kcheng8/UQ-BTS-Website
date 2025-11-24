@@ -19,23 +19,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ------- Hamburger menu dropdown -------
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+    document.addEventListener("DOMContentLoaded", () => {
+        const menuToggle = document.querySelector(".menu-toggle");
+        const navLinks = document.querySelector(".nav-links");
 
-    if (menuToggle && navLinks) {
-        // Open/close menu when hamburger clicked
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("show");
-        });
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener("click", () => {
+                navLinks.classList.toggle("show");
+                menuToggle.classList.toggle("active"); // animates bars into X
+            });
 
-        // Optional: close menu when a link is clicked
-        const links = navLinks.querySelectorAll("a");
-        for (let i = 0; i < links.length; i++) {
-            links[i].addEventListener("click", () => {
-                navLinks.classList.remove("show");
+            // Close menu when a link is clicked (optional)
+            navLinks.querySelectorAll("a").forEach((link) => {
+                link.addEventListener("click", () => {
+                    navLinks.classList.remove("show");
+                    menuToggle.classList.remove("active");
+                });
             });
         }
-    }
+    });
 
     // -------- Gallery slider --------
     const prev = document.querySelector(".prev");
