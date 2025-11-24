@@ -4,41 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
     <title>UQ Biotech Society</title> 
 </head>
 
 <body>
     <!-- Navigation Bar --> 
 <nav class="navbar">
-
-    <!-- Logo Section -->
     <div class="nav-left">
-        <img src="Images/uq_biotechnology_society_logo.jpeg" 
-             alt="UQ Biotech Society Logo" 
-             class="logo-img">
-        <div class="logo">UQ Biotechnology Society</div>
+        <img src="Images/uq_biotechnology_society_logo.jpeg" class="logo-img" alt="UQ BTS Logo">
+        <span class="logo">UQ Biotech Society</span>
     </div>
 
-    <!-- Hamburger button for mobile -->
-    <button class="menu-toggle" aria-label="Toggle navigation">
+    <!-- Hamburger button -->
+    <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
         <span></span>
     </button>
 
-    <!-- Links to Pages in the Navigation Bar --> 
-    <ul class="nav-links">
+    <!-- Dropdown menu -->
+    <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#about" class="nav-item">About</a></li>
-        <li><a href="#team_section" class="nav-item">Meet the team</a></li>
-        <li><a href="#events" class="nav-item">Events</a></li>
+        <li><a href="#team_section" class="nav-item">Team</a></li>
         <li><a href="#sponsors" class="nav-item">Sponsors</a></li>
-        <li><a href="#newsletter" class="nav-item">News Letter</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
     </ul>
 </nav>
-
-
 
 <section class="hero_section" id="home">
     <div class="section_container">
@@ -359,6 +351,6 @@
             © 2025 UQ Biotechnology Society. All Rights Reserved.
         </div>
     </footer>
-
+    <script src="script.js"></script>
 </body>
 </html>
