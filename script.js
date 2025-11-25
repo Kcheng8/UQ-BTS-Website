@@ -38,6 +38,22 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
+    // ------- Sponsor card flip interaction -------
+    const sponsorCardWrappers = document.querySelectorAll(".sponsor_card_wrapper");
+    for (let i = 0; i < sponsorCardWrappers.length; i++) {
+        sponsorCardWrappers[i].addEventListener("click", () => {
+            sponsorCardWrappers[i].classList.toggle("flipped");
+        });
+    }
+
+    // ------- Values card flip interaction -------
+    const valuesCardWrappers = document.querySelectorAll(".values_card_wrapper");
+    for (let i = 0; i < valuesCardWrappers.length; i++) {
+        valuesCardWrappers[i].addEventListener("click", () => {
+            valuesCardWrappers[i].classList.toggle("flipped");
+        });
+    }
+
     // -------- Gallery slider --------
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");

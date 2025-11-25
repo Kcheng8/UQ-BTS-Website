@@ -286,6 +286,7 @@ body {
     align-items: center;
     gap: 40px;
     flex-wrap: wrap;           /* so it stacks nicely on small screens */
+    margin-bottom: 60px;
 }
 
 .text_section {
@@ -312,6 +313,93 @@ body {
     max-width: 450px;
     width: 100%;
     border-radius: 12px;
+}
+
+/* Values Grid */
+.values_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Values card wrapper for 3D flip perspective */
+.values_card_wrapper {
+    perspective: 1000px;
+    cursor: pointer;
+    height: 220px;
+}
+
+/* Individual values card with 3D flip */
+.values_card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
+}
+
+.values_card_wrapper.flipped .values_card {
+    transform: rotateY(180deg);
+}
+
+/* Front of values card */
+.values_card_front {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    border: 2px solid rgba(224, 216, 255, 0.4);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.values_card_front h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.values_card_wrapper:hover .values_card_front {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+    border-color: rgba(224, 216, 255, 0.6);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+}
+
+/* Back of values card */
+.values_card_back {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 2px solid rgba(224, 216, 255, 0.3);
+    padding: 30px 20px;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.values_card_back p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
 }
 
 /* Team Section */
@@ -443,20 +531,81 @@ body {
     justify-items: center;
 }
 
-/* Individual sponsor box */
+/* Sponsor card wrapper for 3D flip perspective */
+.sponsor_card_wrapper {
+    width: 100%;
+    max-width: 200px;
+    perspective: 1000px;
+    cursor: pointer;
+    height: 250px;
+}
+
+/* Individual sponsor card with 3D flip */
 .sponsor_card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transform-style: preserve-3d;
+}
+
+.sponsor_card_wrapper.flipped .sponsor_card {
+    transform: rotateY(180deg);
+}
+
+/* Front of card (logo) */
+.sponsor_card_front {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 20px 15px;
     border-radius: 12px;
     width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    backface-visibility: hidden;
     transition: 0.3s;
+    position: absolute;
+    top: 0;
+    left: 0;
 }
 
-.sponsor_card:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    transform: scale(1.03);
+.sponsor_card_wrapper:hover .sponsor_card_front {
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Back of card (info) */
+.sponsor_card_back {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px 15px;
+    border-radius: 12px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sponsor_card_back h3 {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.sponsor_card_back p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Sponsor logos */
