@@ -4,8 +4,8 @@
     box-sizing: border-box;
 }
 body {
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    background-color: #762d78;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
 }
 
 /* Navigation Bar Styling */
@@ -26,8 +26,8 @@ body {
 }
 
 body {
-    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
-    background-color: #762d78;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffffff;
     padding-top: 80px;  /* roughly navbar height */
 }
 
@@ -193,7 +193,7 @@ body {
 
 /* Hero Section */
 .hero_section {
-    background: url('Images/Research night.jpeg') center/cover no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Images/Research night.jpeg') center/cover no-repeat;
     padding: 120px 0;
     color: white;
 }
@@ -234,8 +234,8 @@ body {
 }
 
 .button {
-    background-color: #ffffff;
-    color: #762d78;
+    background-color: #762d78;
+    color: #ffffff;
     padding: 12px 24px;
     border: none;
     border-radius: 6px;
@@ -246,7 +246,7 @@ body {
 }
 
 .button:hover {
-    background-color: #e5e5e5;
+    background-color: #5a1f5c;
 }
 
 /* Text Colour */
@@ -273,7 +273,8 @@ body {
 /* About Section */
 .about_us {
     padding: 60px 20px;
-    color: white;
+    color: #1e293b;
+    background-color: #f5f5f5;
 }
 
 .section_container {
@@ -345,7 +346,7 @@ body {
 
 /* Front of values card */
 .values_card_front {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.08) 100%);
+    background: linear-gradient(135deg, rgba(118, 45, 120, 0.8) 0%, rgba(118, 45, 120, 0.6) 100%);
     border: 2px solid rgba(224, 216, 255, 0.4);
     padding: 30px 20px;
     border-radius: 12px;
@@ -361,6 +362,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .values_card_front h3 {
@@ -370,15 +372,15 @@ body {
 }
 
 .values_card_wrapper:hover .values_card_front {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.12) 100%);
+    background: linear-gradient(135deg, rgba(118, 45, 120, 0.9) 0%, rgba(118, 45, 120, 0.7) 100%);
     border-color: rgba(224, 216, 255, 0.6);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
 
 /* Back of values card */
 .values_card_back {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.05) 100%);
+    background: linear-gradient(135deg, rgba(118, 45, 120, 0.7) 0%, rgba(118, 45, 120, 0.5) 100%);
     border: 2px solid rgba(224, 216, 255, 0.3);
     padding: 30px 20px;
     border-radius: 12px;
@@ -399,13 +401,14 @@ body {
 .values_card_back p {
     font-size: 0.95rem;
     line-height: 1.5;
-    color: rgba(255, 255, 255, 0.95);
+    color: #ffffff;
 }
 
 /* Team Section */
 .team_section {
     padding: 60px 20px;
-    color: #ffffff;
+    color: #1e293b;
+    background-color: #ffffff;
 }
 
 .team_section .section_title {
@@ -436,16 +439,15 @@ body {
 .team_card {
     width: 100%;
     max-width: 280px;
-    background-color: rgba(0, 0, 0, 0.25);
+    background-color: #f0f0f0;
     border-radius: 16px;
     padding: 20px 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-    backdrop-filter: blur(4px);
+    border-left: 4px solid rgba(118, 45, 120, 0.6);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -469,12 +471,13 @@ body {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 4px;
+    color: #1e293b;
 }
 
 .team_role {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #e0d8ff;
+    color: #762d78;
     margin-bottom: 8px;
 }
 
@@ -483,6 +486,7 @@ body {
     font-size: 0.9rem;
     line-height: 1.5;
     opacity: 0.9;
+    color: #1e293b;
 }
 
 /* Mobile tweaks */
@@ -505,7 +509,8 @@ body {
 /* Sponsor Section */
 .sponsor_section {
     padding: 60px 20px;
-    color: white;
+    color: #1e293b;
+    background-color: #ffffff;
 }
 
 .sponsor_section .section_title {
@@ -555,7 +560,7 @@ body {
 
 /* Front of card (logo) */
 .sponsor_card_front {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #f0f0f0;
     padding: 20px 15px;
     border-radius: 12px;
     width: 100%;
@@ -568,17 +573,19 @@ body {
     position: absolute;
     top: 0;
     left: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .sponsor_card_wrapper:hover .sponsor_card_front {
-    background-color: rgba(255, 255, 255, 0.15);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    background-color: #e8e0eb;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 /* Back of card (info) */
 .sponsor_card_back {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: linear-gradient(135deg, rgba(118, 45, 120, 0.8) 0%, rgba(118, 45, 120, 0.6) 100%);
+    border: 1px solid rgba(224, 216, 255, 0.4);
     padding: 20px 15px;
     border-radius: 12px;
     width: 100%;
@@ -619,13 +626,15 @@ body {
 /* Contact Section */
 .contact_section {
     padding: 60px 20px;
-    color: white;
+    color: #1e293b;
+    background-color: #e0e0e0;
 }
 
 .contact_section .section_title {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 20px;
+    color: #762d78;
 }
 
 .contact_description {
@@ -634,6 +643,7 @@ body {
     margin: 0 auto 40px;
     font-size: 1.05rem;
     line-height: 1.6;
+    color: #762d78;
 }
 
 /* Grid layout */
@@ -648,12 +658,14 @@ body {
 .contact_info h3 {
     font-size: 1.4rem;
     margin-bottom: 10px;
+    color: #762d78;
 }
 
 .contact_info p {
     margin-bottom: 12px;
     font-size: 1rem;
     line-height: 1.5;
+    color: #762d78;
 }
 
 /* Contact form */
@@ -676,8 +688,8 @@ body {
 }
 
 .contact_button {
-    background-color: #ffffff;
-    color: #762d78;
+    background-color: #762d78;
+    color: #ffffff;
     padding: 12px 20px;
     border: none;
     border-radius: 6px;
@@ -688,7 +700,7 @@ body {
 }
 
 .contact_button:hover {
-    background-color: #e5e5e5;
+    background-color: #5a1f5c;
 }
 
 /* Scroll Reveal */
@@ -911,13 +923,14 @@ body {
 
 .contact_section {
     padding: 60px 20px;
-    color: #ffffff;
+    color: #762d78;
 }
 
 .contact_section .section_title {
     text-align: center;
     font-size: 2.2rem;
     margin-bottom: 15px;
+    color: #762d78;
 }
 
 .contact_text {
@@ -926,6 +939,7 @@ body {
     margin: 0 auto 30px;
     opacity: 0.9;
     font-size: 1.05rem;
+    color: #762d78;
 }
 
 /* Form styling */
@@ -945,6 +959,7 @@ body {
 .input_group label {
     font-weight: 600;
     margin-bottom: 6px;
+    color: #762d78;
 }
 
 .input_group input,
@@ -963,8 +978,8 @@ body {
 
 /* Submit button */
 .submit_button {
-    background-color: #ffffff;
-    color: #5b0a64;
+    background-color: #762d78;
+    color: #ffffff;
     width: fit-content;
     margin: 10px auto 0;
     padding: 12px 26px;
@@ -976,7 +991,7 @@ body {
 }
 
 .submit_button:hover {
-    background-color: #e7d2ff;
+    background-color: #5a1f5c;
     transform: translateY(-2px);
 }
 
