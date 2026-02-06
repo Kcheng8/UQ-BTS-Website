@@ -179,6 +179,46 @@ document.addEventListener("DOMContentLoaded", () => {
             generateCalendar(currentDate);
         });
     }
+
+    // ------- Counter animation for statistics -------
+    let counterStarted = false;
+    window.addEventListener("scroll", () => {
+        if (counterStarted) return;
+        
+        const highlightSection = document.querySelector(".about_highlights");
+        if (!highlightSection) return;
+        
+        const rect = highlightSection.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+            counterStarted = true;
+            animateCounters();
+        }
+    });
+
+    function animateCounters() {
+        const counters = document.querySelectorAll(".highlight_number");
+        const duration = 2000; // 2 seconds
+        const start = Date.now();
+
+        counters.forEach(counter => {
+            const target = parseInt(counter.getAttribute("data-target"));
+            
+            function update() {
+                const now = Date.now();
+                const progress = Math.min((now - start) / duration, 1);
+                const current = Math.floor(progress * target);
+                counter.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                } else {
+                    counter.textContent = target;
+                }
+            }
+            
+            update();
+        });
+    }
 });
 
 // Run on scroll as well
