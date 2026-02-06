@@ -1683,7 +1683,7 @@ body {
     }
     
     .events_calendar {
-        padding: 15px;
+        padding: 12px;
     }
     
     .calendar_controls {
@@ -1692,13 +1692,14 @@ body {
     }
     
     .calendar_month {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     
     .calendar_btn {
-        width: 32px;
-        height: 32px;
-        font-size: 0.9rem;
+        width: 30px;
+        height: 30px;
+        font-size: 0.85rem;
+        flex-shrink: 0;
     }
     
     .calendar_btn:hover {
@@ -1706,21 +1707,25 @@ body {
     }
     
     .calendar_grid {
-        gap: 4px;
+        gap: 3px;
+        width: 100%;
+        overflow: hidden;
     }
     
     .calendar_header {
-        padding: 6px 0;
-        font-size: 0.65rem;
+        padding: 4px 1px;
+        font-size: 0.6rem;
         font-weight: 600;
         letter-spacing: -0.5px;
+        line-height: 1.2;
     }
     
     .calendar_day {
-        min-height: 40px;
-        font-size: 0.85rem;
-        border-radius: 4px;
-        padding: 2px;
+        min-height: 35px;
+        font-size: 0.75rem;
+        border-radius: 3px;
+        padding: 0;
+        aspect-ratio: 1;
     }
     
     .calendar_day:not(.empty):hover {
