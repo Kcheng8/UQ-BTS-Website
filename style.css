@@ -937,7 +937,7 @@ body {
 .ribbon_track {
     display: flex;
     gap: 60px;
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 60s linear infinite;
     width: fit-content;
 }
 
