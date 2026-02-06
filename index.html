@@ -37,7 +37,7 @@
     <ul class="nav-links" id="navLinks">
         <li><a href="#home" class="nav-item">Home</a></li>
         <li><a href="#about" class="nav-item">About</a></li>
-        <li><a href="#team_section" class="nav-item">Team</a></li>
+        <li><a href="team.html" class="nav-item">Team</a></li>
         <li><a href="#sponsors" class="nav-item">Sponsors</a></li>
         <li><a href="#contact" class="nav-item">Contact Us</a></li>
     </ul>
@@ -64,15 +64,19 @@
     <!-- About Section -->
 <section class="about_us reveal" id="about">
     <div class="section_container">
+        <h2 class="section_title about_title">About Us</h2>
+        
         <div class="about_container">
-
             <div class="text_section">
-                <h2 class="section_title">About Us</h2>
-                <p>
-                    <b>We are the University of Queensland’s founding Biotechnology Student Society.</b>
+                <h3 class="about_intro">We are the University of Queensland's founding Biotechnology Student Society.</h3>
+                
+                <p class="about_main_text">
                     We aim to provide professional networking, employability opportunities,
                     research information, social events for science students, and mentoring –
                     all to enhance the student experience.
+                </p>
+                
+                <p class="about_secondary_text">
                     We are a collective of ambitious students from across biotechnology and STEM
                     who want to connect with like-minded people, build relationships, discover
                     the world of biotech, and engage with industry leaders.
@@ -80,13 +84,79 @@
             </div>
 
             <div class="image_section">
-                <img src="Images/Career night.jpeg"
-                    alt="UQ Biotech Society"
-                    class="about_img">
+                <div class="image_wrapper">
+                    <img src="Images/Career night.jpeg"
+                        alt="UQ Biotech Society"
+                        class="about_img">
+                </div>
             </div>
-
         </div>
+        
+    </div>
+</section>
 
+    <!-- Statistics Section -->
+    <section class="statistics_section" id="statistics">
+        <div class="section_container">
+            <div class="about_highlights">
+                <div class="highlight_item">
+                    <span class="highlight_number">600+</span>
+                    <span class="highlight_label">Active Members</span>
+                </div>
+                <div class="highlight_item">
+                    <span class="highlight_number">20+</span>
+                    <span class="highlight_label">Annual Events</span>
+                </div>
+                <div class="highlight_item">
+                    <span class="highlight_number">50+</span>
+                    <span class="highlight_label">Industry Partners</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Ribbon -->
+    <div class="sponsors_ribbon">
+        <div class="ribbon_container">
+            <div class="ribbon_track">
+                <div class="ribbon_item">
+                    <img src="Images/thermo_fisher_scientific_logo.jpeg" alt="Thermo Fisher Scientific">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/vaxxas_logo.jpeg" alt="Vaxxas">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/southern_rna_logo.jpeg" alt="Southern RNA">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/sartorius_logo.jpeg" alt="Sartorius">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/microbioaus_logo.jpeg" alt="Microbio">
+                </div>
+                <!-- Duplicate for seamless loop -->
+                <div class="ribbon_item">
+                    <img src="Images/thermo_fisher_scientific_logo.jpeg" alt="Thermo Fisher Scientific">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/vaxxas_logo.jpeg" alt="Vaxxas">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/southern_rna_logo.jpeg" alt="Southern RNA">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/sartorius_logo.jpeg" alt="Sartorius">
+                </div>
+                <div class="ribbon_item">
+                    <img src="Images/microbioaus_logo.jpeg" alt="Microbio">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Values/Mission Section -->
+<section class="values_section" id="values">
+    <div class="section_container">
         <!-- Mission/Values Cards -->
         <div class="values_grid">
             <div class="values_card_wrapper">
@@ -125,157 +195,106 @@
     </div>
 </section>
 
-
-        <section class="team_section" id="team_section">
-        <div class="section_container">
-            <h2 class="section_title">Meet the Team</h2>
-
-            <!-- T3 / Executive Team -->
-            <h3 class="team_group_title">T3</h3>
-            <div class="team_grid">
-                <!-- President -->
-                <div class="team_card">
-                    <img src="Images/president.jpg" alt="President" class="team_photo">
-                    <h3 class="team_name">Lily Nidea</h3>
-                    <p class="team_role">President</p>
-                    <p class="team_bio">
-                        Oversees all society operations and sets the direction 
-                        upon which the decisions of the rest of the executive are based. 
-                    </p>
-                </div>
-
-                <!-- Treasurer -->
-                <div class="team_card">
-                    <img src="Images/vice_president.jpg" alt="Treasurer" class="team_photo">
-                    <h3 class="team_name">Priscilla Chang</h3>
-                    <p class="team_role">Treasurer</p>
-                    <p class="team_bio">
-                        Responsible for monitoring the society’s finances, recording and reporting all transactions,
-                        ensuring the aims and objectives of the society are achievable within budget. 
-                    </p>
-                </div>
-
-                <!-- Secretary -->
-                <div class="team_card">
-                    <img src="Images/vice_president.jpg" alt="Secretary" class="team_photo">
-                    <h3 class="team_name">Angela Anil</h3>
-                    <p class="team_role">Secretary</p>
-                    <p class="team_bio">
-                        Responsible for meetings, record keeping and newsletters. The central coordinator of the society’s 
-                        operations, ensuring that communication, governance, and administration run seamlessly.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Officers -->
-            <h3 class="team_group_title">Officers</h3>
-            <div class="team_grid">
-                <!-- Professional Events Officer -->
-                <div class="team_card">
-                    <img src="Images/Headshot.jpeg" alt="Professional Events Officer" class="team_photo">
-                    <h3 class="team_name">Kierren Cheng</h3>
-                    <p class="team_role">Professional Events Officer</p>
-                    <p class="team_bio">
-                        5th year Engineering (Chemical & Bioprocess) and Science (Microbiology)
-                    </p>
-                </div>
-
-                <!-- Undergraduate Officer -->
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="Undergraduate Officer" class="team_photo">
-                    <h3 class="team_name">Charlotte Heffernan</h3>
-                    <p class="team_role">Undergraduate Officer</p>
-                    <p class="team_bio">
-                        Responsible for coordinating undergraduate events and ensuring the interests of undergraduate students
-                        are at the forefront of all society activities.
-                    </p>
-                </div>
-
-                <!-- Postgraduate Officer -->
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="Postgraduate Officer" class="team_photo">
-                    <h3 class="team_name">Yashika Kad</h3>
-                    <p class="team_role">Postgraduate Officer</p>
-                    <p class="team_bio">
-                        Responsible for coordinating postgraduate events and ensuring the interests of postgraduate students
-                        are represented and supported.
-                    </p>
-                </div>
-
-                <!-- Media Officer -->
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="Media Officer" class="team_photo">
-                    <h3 class="team_name">Chloe Wu</h3>
-                    <p class="team_role">Media Officer</p>
-                    <p class="team_bio">
-                        Manages social media platforms and communicates the society's activities and events to members.
-                    </p>
-                </div>
-
-                <!-- Graphic Design Officer -->
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="Graphic Design Officer" class="team_photo">
-                    <h3 class="team_name">Maria Anindya</h3>
-                    <p class="team_role">Graphic Design Officer</p>
-                    <p class="team_bio">
-                        Visually communicates the society’s activities and events through creative and engaging design content.
-                    </p>
-                </div>
-            </div>
-
-            <!-- General Executives -->
-            <h3 class="team_group_title">General Executives</h3>
-            <div class="team_grid">
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="General Executive" class="team_photo">
-                    <h3 class="team_name">First Last</h3>
-                    <p class="team_role">General Executive</p>
-                </div>
-
-                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="General Executive" class="team_photo">
-                    <h3 class="team_name">First Last</h3>
-                    <p class="team_role">General Executive</p>
-                </div>
-
-                                <div class="team_card">
-                    <img src="Images/Undergraduate Officer.jpeg" alt="General Executive" class="team_photo">
-                    <h3 class="team_name">First Last</h3>
-                    <p class="team_role">General Executive</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
     <!-- Upcoming Events Section -->
-    <section id="events" class="section_container">
-        <div class="about_container">
-            <h2 class="text_section">Upcoming Events</h2>
+    <section id="events">
+        <div class="section_container">
+            <h2>Upcoming Events</h2>
             <p>
                 The UQ Biotechnology Society runs a range of professional and social events including lab tours, research and industry nights and career panels.
             </p>
         </div>
     </section>
 
-    <!-- Gallery -->
-    <div class="gallery_slider" id="gallery">
+    <!-- Gallery Section -->
+    <section class="gallery_section" id="gallery">
+        <div class="section_container">
+            <h2 class="section_title">Event Gallery</h2>
+            <p class="gallery_description">
+                Explore highlights from our past events and the vibrant community we've built.
+            </p>
+            
+            <div class="gallery_slider">
+                <button class="gallery_btn prev" aria-label="Previous image">❮</button>
 
-        <button class="gallery_btn prev">&#10094;</button>
+                <div class="slide">
+                    <div class="item">
+                        <img src="Images/Bioinformatics panel.jpeg" alt="Bioinformatics Panel Event">
+                        <div class="image_overlay">
+                            <p>Bioinformatics Panel</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="Images/commercialisation panel.jpeg" alt="Commercialisation Panel Event">
+                        <div class="image_overlay">
+                            <p>Commercialisation Panel</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="Images/Career night.jpeg" alt="Career Night Event">
+                        <div class="image_overlay">
+                            <p>Career Night</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="Images/Research night.jpeg" alt="Research Night Event">
+                        <div class="image_overlay">
+                            <p>Research Night</p>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="Images/Industry Night.jpeg" alt="Industry Night Event">
+                        <div class="image_overlay">
+                            <p>Industry Night</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="slide">
-            <div class="item"><img src="Images/Bioinformatics panel.jpeg"></div>
-            <div class="item"><img src="Images/commercialisation panel.jpeg"></div>
-            <div class="item"><img src="Images/Career night.jpeg"></div>
-            <div class="item"><img src="Images/Research night.jpeg"></div>
-            <div class="item"><img src="Images/Industry Night.jpeg"></div>
+                <button class="gallery_btn next" aria-label="Next image">❯</button>
+            </div>
+            
+            <div class="gallery_dots" id="galleryDots"></div>
         </div>
-
-        <button class="gallery_btn next">&#10095;</button>
-
-    </div>
+    </section>
 
 
+    <!-- Interviews Section -->
+    <section class="interviews_section" id="interviews">
+        <div class="section_container">
+            <h2 class="section_title">Featured Interviews</h2>
+            <p class="interviews_description">
+                Explore insights from industry leaders and professionals in biotechnology through our featured video interviews.
+            </p>
+            
+            <div class="interviews_grid">
+                <!-- Interview 1 -->
+                <div class="interview_card">
+                    <div class="interview_video">
+                        <iframe src="https://www.youtube.com/embed/IVdMghwxDIY" height="500" width="100%" frameborder="0" allowfullscreen="" title="Biotech Opportunities in Australia"></iframe>
+                    </div>
+                    <div class="interview_content">
+                        <h3>Biotech Opportunities in Australia</h3>
+                        <p>This discussion addresses frequently asked questions from aspiring biotech professionals, provides insights into the Australian biotechnology job market, and offers practical advice for students and alumni seeking to become competitive candidates in this rapidly evolving industry.</p>
+                        <a href="https://www.youtube.com/watch?v=IVdMghwxDIY" target="_blank" rel="noopener noreferrer" class="interview_link">View on YouTube →</a>
+                    </div>
+                </div>
+
+                <!-- Interview 2 -->
+                <div class="interview_card">
+                    <div class="interview_video">
+                        <iframe src="https://www.youtube.com/embed/wX3o_55QgSY" height="500" width="100%" frameborder="0" allowfullscreen="" title="Female Leadership in Biotech"></iframe>
+                    </div>
+                    <div class="interview_content">
+                        <h3>Female Leadership in Biotech</h3>
+                        <p>This interview explores Kym Baker's career journey from academia to senior leadership roles in the UK, and her subsequent return to Australia. She reflects on the key qualities of effective leadership, professional growth, and the challenges she encountered along the way.</p>
+                        <a href="https://www.youtube.com/watch?v=wX3o_55QgSY" target="_blank" rel="noopener noreferrer" class="interview_link">View on YouTube →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Sponsors Section -->
     <section class="sponsor_section" id="sponsors">
         <div class="section_container">
 
@@ -417,7 +436,7 @@
                 <ul class="footer_links">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#team_section">Meet the Team</a></li>
+                    <li><a href="team.html">Meet the Team</a></li>
                     <li><a href="#events">Events</a></li>
                     <li><a href="#gallery">Gallery</a></li>
                     <li><a href="#sponsors">Sponsors</a></li>

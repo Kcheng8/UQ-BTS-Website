@@ -57,24 +57,64 @@ document.addEventListener("DOMContentLoaded", () => {
     // -------- Gallery slider --------
     const prev = document.querySelector(".prev");
     const next = document.querySelector(".next");
+    let currentSlide = 0;
+    const items = document.querySelectorAll(".item");
+    const totalSlides = items.length;
+
+    // Hide all items except the first one initially
+    function hideAllItems() {
+        items.forEach((item, index) => {
+            item.style.display = index === currentSlide ? "flex" : "none";
+        });
+    }
+
+    // Create gallery dots
+    const dotsContainer = document.getElementById("galleryDots");
+    if (dotsContainer) {
+        for (let i = 0; i < totalSlides; i++) {
+            const dot = document.createElement("div");
+            dot.classList.add("gallery_dot");
+            if (i === 0) dot.classList.add("active");
+            dot.addEventListener("click", () => {
+                goToSlide(i);
+            });
+            dotsContainer.appendChild(dot);
+        }
+    }
+
+    function updateDots() {
+        const dots = document.querySelectorAll(".gallery_dot");
+        dots.forEach((dot, index) => {
+            dot.classList.toggle("active", index === currentSlide);
+        });
+    }
+
+    function goToSlide(n) {
+        currentSlide = n;
+        hideAllItems();
+        updateDots();
+    }
+
+    // Initialize - hide all except first
+    hideAllItems();
 
     if (prev && next) {
         prev.addEventListener("click", () => {
-            const items = document.querySelectorAll(".item");
-            const slide = document.querySelector(".slide");
-            if (items.length && slide) {
-                slide.prepend(items[items.length - 1]);
-            }
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            goToSlide(currentSlide);
         });
 
         next.addEventListener("click", () => {
-            const items = document.querySelectorAll(".item");
-            const slide = document.querySelector(".slide");
-            if (items.length && slide) {
-                slide.append(items[0]);
-            }
+            currentSlide = (currentSlide + 1) % totalSlides;
+            goToSlide(currentSlide);
         });
     }
+
+    // Optional: Auto-advance gallery every 7 seconds
+    setInterval(() => {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        goToSlide(currentSlide);
+    }, 7000);
 });
 
 // Run on scroll as well
