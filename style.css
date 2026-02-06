@@ -404,11 +404,14 @@ body {
     flex-wrap: wrap;
     margin-bottom: 60px;
     justify-content: center;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .text_section {
-    flex: 1 1 350px;
-    max-width: 550px;
+    flex: 0 1 450px;
+    max-width: 450px;
 }
 
 .about_intro {
@@ -417,7 +420,7 @@ body {
     margin: 0 0 25px 0;
     line-height: 1.6;
     font-weight: 500;
-    text-align: center;
+    text-align: left;
 }
 
 .about_main_text {
@@ -426,7 +429,7 @@ body {
     color: #555555;
     margin-bottom: 20px;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .about_secondary_text {
@@ -435,7 +438,7 @@ body {
     color: #666666;
     margin-bottom: 0;
     font-weight: 400;
-    text-align: center;
+    text-align: left;
 }
 
 .about_highlights {
@@ -447,6 +450,9 @@ body {
     border-radius: 0;
     border-left: none;
     margin-top: 0;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .highlight_item {
@@ -473,9 +479,10 @@ body {
 
 /* Right-side image */
 .image_section {
-    flex: 1 1 450px;
+    flex: 0 1 450px;
     display: flex;
     justify-content: center;
+    align-items: flex-start;
 }
 
 .image_wrapper {
@@ -512,23 +519,28 @@ body {
     .about_container {
         gap: 30px;
         flex-direction: column;
-        align-items: stretch;
+        align-items: center;
+        max-width: 100%;
     }
     
     .text_section {
         max-width: 100%;
+        flex: 1 1 100%;
     }
     
     .about_intro {
         font-size: 1.1rem;
+        text-align: center;
     }
     
     .about_main_text {
         font-size: 0.95rem;
+        text-align: center;
     }
     
     .about_secondary_text {
         font-size: 0.9rem;
+        text-align: center;
     }
     
     .about_highlights {
@@ -536,6 +548,7 @@ body {
         gap: 20px;
         padding: 0;
         margin-top: 20px;
+        max-width: 100%;
     }
     
     .highlight_item {
@@ -553,6 +566,7 @@ body {
     .image_section {
         flex: 1 1 100%;
         width: 100%;
+        max-width: 100%;
     }
     
     .image_wrapper {
