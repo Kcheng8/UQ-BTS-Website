@@ -211,6 +211,103 @@ body {
     justify-content: center;
 }
 
+/* Mission/Values Section */
+.mission_section {
+    padding: 60px 20px;
+    color: #1e293b;
+    background-color: #ffffff;
+}
+
+.mission_section .section_title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    color: #762d78;
+}
+
+.mission_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.mission_card {
+    background-color: transparent;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission_card:hover {
+    transform: translateY(-8px);
+}
+
+.mission_image {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mission_image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.mission_card:hover .mission_image img {
+    transform: scale(1.05);
+}
+
+.mission_card h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #762d78;
+    margin-bottom: 12px;
+}
+
+.mission_card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #5a5a5a;
+}
+
+@media (max-width: 768px) {
+    .mission_section {
+        padding: 50px 16px;
+    }
+
+    .mission_section .section_title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .mission_grid {
+        gap: 25px;
+    }
+
+    .mission_image {
+        height: 180px;
+        margin-bottom: 15px;
+    }
+
+    .mission_card h3 {
+        font-size: 1.2rem;
+    }
+
+    .mission_card p {
+        font-size: 0.9rem;
+    }
+}
+
 .section_container {
     max-width: 1000px;
     margin: auto;
@@ -305,7 +402,7 @@ body {
     align-items: center;
     gap: 50px;
     flex-wrap: wrap;
-    margin-bottom: 0;
+    margin-bottom: 60px;
 }
 
 .text_section {
