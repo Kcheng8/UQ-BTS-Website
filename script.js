@@ -115,6 +115,70 @@ document.addEventListener("DOMContentLoaded", () => {
         currentSlide = (currentSlide + 1) % totalSlides;
         goToSlide(currentSlide);
     }, 7000);
+
+    // -------- Event Calendar --------
+    let currentDate = new Date();
+    
+    function generateCalendar(date) {
+        const year = date.getFullYear();
+        const month = date.getMonth();
+        
+        // Update month display
+        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
+            'July', 'August', 'September', 'October', 'November', 'December'];
+        document.getElementById('calendarMonth').textContent = `${monthNames[month]} ${year}`;
+        
+        // Clear previous calendar
+        const calendarGrid = document.getElementById('calendarGrid');
+        calendarGrid.innerHTML = '';
+        
+        // Add day headers
+        const dayHeaders = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+        dayHeaders.forEach(day => {
+            const header = document.createElement('div');
+            header.className = 'calendar_header';
+            header.textContent = day;
+            calendarGrid.appendChild(header);
+        });
+        
+        // Get first day of month and number of days
+        const firstDay = new Date(year, month, 1).getDay();
+        const daysInMonth = new Date(year, month + 1, 0).getDate();
+        
+        // Add empty cells for days before month starts
+        for (let i = 0; i < firstDay; i++) {
+            const emptyDay = document.createElement('div');
+            emptyDay.className = 'calendar_day empty';
+            calendarGrid.appendChild(emptyDay);
+        }
+        
+        // Add days of month
+        for (let day = 1; day <= daysInMonth; day++) {
+            const dayCell = document.createElement('div');
+            dayCell.className = 'calendar_day';
+            dayCell.textContent = day;
+            calendarGrid.appendChild(dayCell);
+        }
+    }
+    
+    // Initialize calendar
+    generateCalendar(currentDate);
+    
+    // Calendar navigation
+    const prevMonthBtn = document.querySelector('.prev_month');
+    const nextMonthBtn = document.querySelector('.next_month');
+    
+    if (prevMonthBtn && nextMonthBtn) {
+        prevMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            generateCalendar(currentDate);
+        });
+        
+        nextMonthBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            generateCalendar(currentDate);
+        });
+    }
 });
 
 // Run on scroll as well
