@@ -11,7 +11,7 @@ Visit us at: [UQ BTS Website](https://kcheng8.github.io/UQ-BTS-Website/)
 - **Hero Section** - Welcome banner with call-to-action
 - **About Us** - Society overview with statistics (600+ members, 20+ events, 50+ partners)
 - **What We Offer** - Mission, Community, and Services with image cards
-- **Sponsors Ribbon** - Animated horizontal scroll of partner logos
+- **Sponsors Ribbon** - Continuous seamless infinite-scrolling ribbon of partner logos
 - **Upcoming Events** - Interactive calendar for event planning
 - **Event Gallery** - Showcase of past events with auto-advancing slider
 - **Featured Interviews** - Embedded YouTube videos from industry professionals
@@ -41,8 +41,10 @@ Visit us at: [UQ BTS Website](https://kcheng8.github.io/UQ-BTS-Website/)
 UQBTS Website/
 ├── index.html          # Main landing page
 ├── team.html           # Team page
+├── merch.html          # Merchandise page
 ├── style.css           # Main stylesheet
 ├── script.js           # Interactive features
+├── CNAME               # Custom domain configuration
 ├── README.md           # This file
 └── Images/             # All website images
     ├── Logo and branding
@@ -114,4 +116,4 @@ For inquiries about the website or UQ BTS, please use the contact form on the we
 
 ## 📄 License
 
-© 2025 UQ Biotechnology Society. All Rights Reserved.
+© 2026 UQ Biotechnology Society. All Rights Reserved.
