@@ -102,6 +102,36 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // Touch/swipe support for mobile
+    const slider = document.querySelector(".gallery_slider");
+    if (slider) {
+        let touchStartX = 0;
+        let touchEndX = 0;
+        
+        slider.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+        
+        slider.addEventListener("touchend", (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+        
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            if (touchEndX < touchStartX - swipeThreshold) {
+                // Swipe left - next slide
+                currentSlide = (currentSlide + 1) % totalSlides;
+                goToSlide(currentSlide);
+            }
+            if (touchEndX > touchStartX + swipeThreshold) {
+                // Swipe right - previous slide
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                goToSlide(currentSlide);
+            }
+        }
+    }
+
     // Optional: Auto-advance gallery every 7 seconds
     setInterval(() => {
         currentSlide = (currentSlide + 1) % totalSlides;

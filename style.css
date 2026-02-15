@@ -1491,43 +1491,110 @@ body {
 /* Mobile Gallery */
 @media (max-width: 768px) {
     .gallery_section {
-        padding: 40px 20px;
+        padding: 40px 15px;
     }
     
     .gallery_section .section_title {
         font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    
+    .gallery_description {
+        font-size: 0.95rem;
+        margin-bottom: 30px;
+        padding: 0 10px;
     }
     
     .gallery_slider {
         max-width: 100%;
         margin: 0 0 20px 0;
+        border-radius: 12px;
     }
     
     .item {
-        height: 300px;
+        height: 280px;
     }
     
     .gallery_btn {
-        padding: 10px 13px;
-        width: 44px;
-        height: 44px;
-        font-size: 1.4rem;
+        padding: 8px 12px;
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
     }
     
     .gallery_btn.prev {
-        left: 12px;
+        left: 10px;
     }
     
     .gallery_btn.next {
-        right: 12px;
+        right: 10px;
     }
     
     .image_overlay {
         padding: 20px 15px 15px;
+        transform: translateY(0);
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.85), transparent);
     }
     
     .image_overlay p {
         font-size: 1rem;
+    }
+    
+    .gallery_dots {
+        gap: 10px;
+        padding: 15px 0;
+    }
+    
+    .gallery_dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery_section {
+        padding: 30px 10px;
+    }
+    
+    .gallery_section .section_title {
+        font-size: 1.5rem;
+    }
+    
+    .gallery_description {
+        font-size: 0.9rem;
+        margin-bottom: 25px;
+    }
+    
+    .gallery_slider {
+        border-radius: 8px;
+    }
+    
+    .item {
+        height: 240px;
+    }
+    
+    .gallery_btn {
+        padding: 6px 10px;
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+    
+    .gallery_btn.prev {
+        left: 8px;
+    }
+    
+    .gallery_btn.next {
+        right: 8px;
+    }
+    
+    .image_overlay p {
+        font-size: 0.9rem;
+    }
+    
+    .gallery_dot {
+        width: 8px;
+        height: 8px;
     }
 }
 
