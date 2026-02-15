@@ -1660,6 +1660,19 @@ body {
     border-color: #762d78;
 }
 
+.calendar_day.today {
+    border: 2px solid #ff6b35;
+    background-color: #fff5f0;
+    font-weight: 700;
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.3);
+}
+
+.calendar_day.today.has_event {
+    background-color: #762d78;
+    border: 2px solid #ff6b35;
+    box-shadow: 0 0 8px rgba(255, 107, 53, 0.5);
+}
+
 /* Event Tooltip */
 .event_tooltip {
     position: absolute;

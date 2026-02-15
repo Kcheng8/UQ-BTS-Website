@@ -170,11 +170,20 @@ document.addEventListener("DOMContentLoaded", () => {
             calendarGrid.appendChild(emptyDay);
         }
         
+        // Get today's date for highlighting
+        const today = new Date();
+        const isCurrentMonth = today.getFullYear() === year && today.getMonth() === month;
+        
         // Add days of month
         for (let day = 1; day <= daysInMonth; day++) {
             const dayCell = document.createElement('div');
             dayCell.className = 'calendar_day';
             dayCell.textContent = day;
+            
+            // Highlight today's date
+            if (isCurrentMonth && day === today.getDate()) {
+                dayCell.classList.add('today');
+            }
             
             // Check if this day has events
             const dayEvents = getEventsForDate(year, month, day);
