@@ -1641,6 +1641,87 @@ body {
     border-color: #762d78;
 }
 
+.calendar_day.has_event {
+    background-color: #762d78;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.calendar_day.has_event::after {
+    content: '•';
+    position: absolute;
+    bottom: 5px;
+    font-size: 1.2rem;
+    color: #ffffff;
+}
+
+.calendar_day.has_event:hover {
+    background-color: #5a1f5c;
+    border-color: #762d78;
+}
+
+/* Event Tooltip */
+.event_tooltip {
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ffffff;
+    border: 2px solid #762d78;
+    border-radius: 8px;
+    padding: 12px 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    min-width: 250px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    margin-bottom: 8px;
+}
+
+.calendar_day.has_event:hover .event_tooltip {
+    opacity: 1;
+    visibility: visible;
+}
+
+.event_tooltip::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 8px;
+    border-style: solid;
+    border-color: #762d78 transparent transparent transparent;
+}
+
+.tooltip_event {
+    text-align: left;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.tooltip_event:last-child {
+    margin-bottom: 0;
+}
+
+.tooltip_event strong {
+    color: #762d78;
+    font-size: 0.95rem;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.tooltip_event span {
+    display: block;
+    color: #5a5a5a;
+    font-size: 0.82rem;
+    margin-top: 2px;
+}
+
 /* Events List */
 .events_list {
     background-color: #ffffff;

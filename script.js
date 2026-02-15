@@ -111,6 +111,32 @@ document.addEventListener("DOMContentLoaded", () => {
     // -------- Event Calendar --------
     let currentDate = new Date();
     
+    // Event data for Semester 1 2026
+    const events = [
+        { date: '2026-02-18', title: 'Market Day', time: '8am-3pm', location: 'UQ Great Court' },
+        { date: '2026-02-25', title: 'Launch Party', time: '6pm-9pm', location: 'TBD' },
+        { date: '2026-03-02', title: 'Mentorship Program - Mentor Induction', time: '6pm-8pm', location: 'TBC' },
+        { date: '2026-03-04', title: 'Simon Lake: Quality Reflections', time: '6pm-9pm', location: 'Abel Smith Theatre' },
+        { date: '2026-03-06', title: 'Employability Development Series #1', time: '6pm-9pm', location: 'Abel Smith Theatre' },
+        { date: '2026-03-11', title: 'Mentorship - Industry Mentor Session #1', time: '6pm-8pm', location: 'TBC' },
+        { date: '2026-03-12', title: 'Majors Night', time: '6pm-9pm', location: 'UQ ModWest Room' },
+        { date: '2026-03-13', title: 'Biomanufacturing Masterclass', time: '6pm-9pm', location: 'TBD' },
+        { date: '2026-03-16', title: 'Southern RNA Lab Tour', time: 'TBC', location: 'Gold Coast Site' },
+        { date: '2026-03-17', title: 'Patheon Lab Tour', time: 'TBC', location: 'TBC' },
+        { date: '2026-03-18', title: 'Frazer Institute Lab Tour', time: 'TBC', location: 'Frazer Institute' },
+        { date: '2026-03-18', title: 'Mentorship - Industry Mentor Session #3', time: '6pm-8pm', location: 'TBC' },
+        { date: '2026-03-23', title: 'TRI Tour', time: 'TBC', location: 'TRI' },
+        { date: '2026-03-24', title: 'MedTech Career Panel', time: '6pm-8pm', location: 'TBC' },
+        { date: '2026-03-25', title: 'Mentorship - Industry Mentor Session #2', time: '6pm-7pm', location: 'TBC' },
+        { date: '2026-03-26', title: 'AIBN / PEF Lab Tour', time: 'TBC', location: 'AIBN/PEF' },
+        { date: '2026-03-31', title: 'Industry Night', time: '6pm-9pm', location: 'ModWest' }
+    ];
+    
+    function getEventsForDate(year, month, day) {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
+        return events.filter(event => event.date === dateStr);
+    }
+    
     function generateCalendar(date) {
         const year = date.getFullYear();
         const month = date.getMonth();
@@ -149,6 +175,30 @@ document.addEventListener("DOMContentLoaded", () => {
             const dayCell = document.createElement('div');
             dayCell.className = 'calendar_day';
             dayCell.textContent = day;
+            
+            // Check if this day has events
+            const dayEvents = getEventsForDate(year, month, day);
+            if (dayEvents.length > 0) {
+                dayCell.classList.add('has_event');
+                
+                // Create tooltip with event details
+                const tooltip = document.createElement('div');
+                tooltip.className = 'event_tooltip';
+                
+                dayEvents.forEach(event => {
+                    const eventInfo = document.createElement('div');
+                    eventInfo.className = 'tooltip_event';
+                    eventInfo.innerHTML = `
+                        <strong>${event.title}</strong><br>
+                        <span>⏰ ${event.time}</span><br>
+                        <span>📍 ${event.location}</span>
+                    `;
+                    tooltip.appendChild(eventInfo);
+                });
+                
+                dayCell.appendChild(tooltip);
+            }
+            
             calendarGrid.appendChild(dayCell);
         }
     }
