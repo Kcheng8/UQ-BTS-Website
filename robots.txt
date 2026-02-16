@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kcheng8.github.io/UQ-BTS-Website/sitemap.xml
