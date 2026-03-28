@@ -143,23 +143,16 @@ document.addEventListener("DOMContentLoaded", () => {
     
     // Event data for Semester 1 2026
     const events = [
-        { date: '2026-02-18', title: 'Market Day', time: '8am-3pm', location: 'UQ Great Court' },
-        { date: '2026-02-25', title: 'Launch Party', time: '6pm-9pm', location: 'TBD' },
-        { date: '2026-03-02', title: 'Mentorship Program - Mentor Induction', time: '6pm-8pm', location: 'TBC' },
-        { date: '2026-03-04', title: 'Simon Lake: Quality Reflections', time: '6pm-9pm', location: 'Abel Smith Theatre' },
-        { date: '2026-03-06', title: 'Employability Development Series #1', time: '6pm-9pm', location: 'Abel Smith Theatre' },
-        { date: '2026-03-11', title: 'Mentorship - Industry Mentor Session #1', time: '6pm-8pm', location: 'TBC' },
-        { date: '2026-03-12', title: 'Majors Night', time: '6pm-9pm', location: 'UQ ModWest Room' },
-        { date: '2026-03-13', title: 'Biomanufacturing Masterclass', time: '6pm-9pm', location: 'TBD' },
-        { date: '2026-03-16', title: 'Southern RNA Lab Tour', time: 'TBC', location: 'Gold Coast Site' },
-        { date: '2026-03-17', title: 'Patheon Lab Tour', time: 'TBC', location: 'TBC' },
-        { date: '2026-03-18', title: 'Frazer Institute Lab Tour', time: 'TBC', location: 'Frazer Institute' },
-        { date: '2026-03-18', title: 'Mentorship - Industry Mentor Session #3', time: '6pm-8pm', location: 'TBC' },
-        { date: '2026-03-23', title: 'TRI Tour', time: 'TBC', location: 'TRI' },
-        { date: '2026-03-24', title: 'MedTech Career Panel', time: '6pm-8pm', location: 'TBC' },
-        { date: '2026-03-25', title: 'Mentorship - Industry Mentor Session #2', time: '6pm-7pm', location: 'TBC' },
-        { date: '2026-03-26', title: 'AIBN / PEF Lab Tour', time: 'TBC', location: 'AIBN/PEF' },
-        { date: '2026-03-31', title: 'Industry Night', time: '6pm-9pm', location: 'ModWest' }
+        { date: '2026-03-04', title: 'Quality Reflections', time: '6pm-9pm', location: 'Abel Smith Theatre UQ' },
+        { date: '2026-03-13', title: 'Biomanufacturing Masterclass', time: '6pm-9pm', location: 'Abel Smith Theatre UQ' },
+        { date: '2026-03-17', title: 'Employability Development Series #1', time: '6pm-9pm', location: 'AEB Room 301' },
+        { date: '2026-03-24', title: 'MedTech Career Panel', time: '6pm-9pm', location: 'Physiology Theatre' },
+        { date: '2026-03-25', title: 'Majors Night', time: '6pm-9pm', location: 'UQ ModWest' },
+        { date: '2026-03-26', title: 'Employability Development Series #2', time: '6pm-9pm', location: 'AEB Room 301' },
+        { date: '2026-03-31', title: 'Employability Development Series #3', time: '6pm-9pm', location: 'AEB Room 301' },
+        { date: '2026-04-01', title: 'Poster Presentation Competition', time: '6pm-9pm', location: 'Chemistry Podium UQ' },
+        { date: '2026-04-16', title: 'Industry Night', time: '6pm-9pm', location: 'ModWest UQ' },
+        { date: '2026-04-23', title: 'Alumni Panel', time: '6pm-9pm', location: 'TBC' }
     ];
     
     function getEventsForDate(year, month, day) {
